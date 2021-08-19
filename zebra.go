@@ -28,3 +28,7 @@ func RandomPassword() string {
 func TimeBasedToken(mode uint8) string {
 	return Gen(fmt.Sprintf("ptsl:%d", mode))
 }
+
+func UUID() string {
+	return TimeBasedToken(1)
+}
