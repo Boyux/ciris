@@ -30,5 +30,9 @@ func TimeBasedToken(mode uint8) string {
 }
 
 func UUID() string {
-	return TimeBasedToken(1)
+	return Gen("ptsl:1")
+}
+
+func VerifyUUID(uuid string) bool {
+	return Verify("ptsl:1", uuid)
 }
